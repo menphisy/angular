@@ -1,0 +1,16 @@
+<li [ngClass]="{'list-group-item': true, 
+				'list-group-item-success': postsLoveIts > '0',
+				'list-group-item-danger': postsLoveIts < '0'}" style='font-weight: bold'>
+	<div class="row">
+		<div class="col-xs-9">
+			<h2>{{ postsTitre }}</h2>
+		</div>
+		<div class="col-xs-3" style="text-align: right;">			
+  			<h4 style="font-style: italic; color: grey;">{{postsDateMessage| date: 'd/MM/y, hh:mm a' }}</h4>
+
+		</div>
+	</div>
+	<p>  {{ getMsg() }}</p>
+	 <button class="btn btn-success" (click)="addLoveIt()">Love It !</button>&nbsp;
+	 <button class="btn btn-danger" (click)="lessLoveIt()">Don't love It !</button>
+</li>
