@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Post</h1>
+<!--
+      <p>Mise à jour  : {{ lastUpdate | async | date: 'EEEE d MMMM y' : '' : 'fr-FR' | uppercase }}</p>
+
+      <ul class="list-group">
+        <app-appareil 
+        *ngFor="let appareil of appareils" 
+        [appareilName] = "appareil.name"
+        [appareilStatus] = "appareil.status"
+        ></app-appareil>
+      </ul>
+
+      <button class="btn btn-success" 
+      [disabled]="!isAuth"
+      (click)="onAllumer()">Tout Allumer</button>
+    -->
+
+      <ul class="list-group">
+        <app-blog 
+        *ngFor="let post of posts" 
+        [postsTitre] = "post.titre"
+        [postsMessage] = "post.content"
+        [postsLoveIts] = "post.loveits"
+        [postsDateMessage] = "post.created_at"
+        ></app-blog>
+      </ul>
+    </div>
+  </div>
+</div>
